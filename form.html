@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 14px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .wrapper{
+            width: 400px;
+            height: 350px;
+            padding: 40px;
+            box-sizing: border-box;
+            margin : 0 auto;
+
+        }
+        .wrapper > h2{
+            font-size: 20px;
+            color: #9e00c5;
+            margin-bottom: 20px;
+        }
+
+        #form > input{
+            width: 100%;
+            height: 48px;
+            padding: 0 10px;
+            box-sizing: border-box;
+            margin-bottom: 16px;
+            border-radius: 6px;
+            background-color: #F8F8F8;
+        }
+        #form > input::placeholder{
+            color: #D2D2D2;
+        }
+        #form > input[type="submit"]{
+            color: #fff;
+            font-size: 16px;
+            background-color: #c300ff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <form action="#" method="post", id="form">
+            <h2>웹프 시간에 너는 무엇을 하였는가</h2>
+            학번 <input type="number">
+            이름 <input type="text"><br><br>
+            웹 프로그래밍 시간에 배운 것을 간단히 서술해보시오 <br><textarea rows="5", cols="100" name="textarea"></textarea>
+            <br>제작한 깃허브 페이지의 링크를 넣으시오 <input type="url">
+            제작한 소스코드를 넣으시오 <input type="file"><br>
+            <br><input type="submit" value="제출">
+        </form>
+    </div>
+</body>
+</html>
