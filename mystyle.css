@@ -1,0 +1,17 @@
+body > #yh {
+    background-color: yellow;
+    color: red;
+    font-size: 20px;
+    text-align: center;
+    height: 50px;
+
+}
+body {
+    font-size: 150%;
+}
+p:hover {
+    background-color: aqua;
+}
+a:link {
+    color: brown;
+}
