@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 30px solid transparent;
+            width: 300px;
+            height: 60px;
+            border-image: url(border.png) 30 30 round;
+        }
+        p._4th {
+            border: 5px dotted red;
+            border-radius: 25px;
+        }
+        p._5th {
+            border: 5px solid green;
+        }
+        p._6th {
+            border: 5px dashed rgb(0, 204, 255);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="_4th">1학년 4반</p>
+    <p class="_5th">1학년 5반</p>
+    <p class="_6th">1학년 6반</p>
+    <p style="border-style: none;">none.</p>
+    <p style="border-style: dotted;">dotted.</p>
+    <p style="border-style: dashed;">dashed.</p>
+    <p style="border-style: solid;">solid.</p>
+    </div>
+</body>
+</html>
