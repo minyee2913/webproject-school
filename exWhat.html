@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=text] {
+            color: black;
+            border: 2px solid blue;
+            font-weight: bold;
+            width: 90%;
+            margin-bottom: 10px;
+        }
+
+        input[type=text]:hover, input[type=email]:hover {
+            font-style: italic;
+            text-align: center;
+        }
+
+        input[type=text]:focus, input[type=email]:focus {
+            font-size: 2cm;
+        }
+
+        input[type=email] {
+            color: rgb(0, 0, 0);
+            border: 2px solid blue;
+            width: 90%;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        input[type=submit] {
+            background-color: aqua;
+            border: 0px;
+            padding: 3px 32px;
+        }
+        textarea {
+            width: 60%;
+        }
+
+        input[type=submit]:hover {
+            background-image: url("./Screenshot_20210630-184831_YouTube.jpg");
+            padding: 200px 80%;
+            position: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="process.jsp">
+        <label for="name">이름</label><br><input type="text" name="name" placeholder="이름"><br>
+        <label for="email">이메일</label><br><input type="email" name="email" placeholder="이메일"><br>
+        <label for="subject">상품평</label>
+        <br><textarea id="subject" name="subject" placeholder="상품을 평가해주세여" style="height: 100px;">
+        </textarea>
+        <input type="submit" name="제출">
+
+    </form>
+</body>
+</html>

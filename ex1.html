@@ -8,18 +8,30 @@
     <style>
         table {
             border-collapse: collapse;
-            background-color: green;
+            width: 100%;
+
         }
 
         table > thead > tr > th, table > tbody > tr > td {
-            border: 2px solid rgb(255, 255, 255);
+            border-bottom: 2px solid green;
+            width: 100px;
+            text-align: center;
+        }
+
+        table > thead > tr > th {
+            background-color: green;
             color: white;
+        }
+
+        table > tbody > tr:nth-child(even) {
+            background-color: bisque;
         }
     </style>
 </head>
 <body>
     <!--table>thead>tr>th*4-->
     <table>
+        <caption>야이 야이 야~ 내 성적이 어때서~ 이래뵈도 1학년일 뿐인데~</caption>
         <thead>
             <tr>
                 <th>학번</th>
