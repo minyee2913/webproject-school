@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 100px;
+            height: 50px;
+            background-color: yellow;
+            border: 1px solid #000;
+            transition: width 1s, height, 1s border 7s, transform 100s;
+            -webkit-transition: width 1s, height, 10s border 5s, -webkit-transform 100s;
+        }
+        div:hover {
+            width: 500px;
+            height: 500px;
+            border: 100px solid red;
+            transform: rotate(72000deg);
+            -webkit-transform: rotate(72000deg);
+        }
+    </style>
+</head>
+<body>
+    <div>마우스를 올려보세요</div>
+</body>
+</html>
