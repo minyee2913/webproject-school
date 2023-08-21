@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sleep(ms) {
+            return new Promise((r) => setTimeout(r, ms));
+        }
+
+        let enabled = false;
+        let loaded = false;
+
+        function load() {
+            if (loaded) return;
+
+            loaded = true;
+            document.getElementById(`light`).src = './close.webp';
+        }
+
+        async function turnOn() {
+            if (!loaded) return;
+
+            enabled = true;
+            document.getElementById(`light`).src = './8L9Kpm.jpg';
+
+            await sleep(1500);
+
+            document.getElementById(`light`).src = './good.gif';
+
+            let num = 0;
+            while(enabled) {
+                num += 20;
+                if (Math.random() <= 0.5) num += 10;
+                else num -= 10;
+                document.getElementById(`light`).style.marginLeft = num + "px";
+
+                await sleep(10);
+            }
+        }
+
+        function turnOff() {
+            if (!enabled) return;
+            if (!loaded) return;
+
+            enabled = false;
+            document.getElementById(`light`).src = './close.webp';
+        }
+    </script>
+</head>
+<body>
+    <h1>기획 의도</h1>
+    <h2>기출변형을 해봤습니다</h2>
+    <button onclick="load()">불러와라!</button>
+    <button onclick="turnOn()">켜저라!</button>
+    <button onclick="turnOff()">꺼져라!</button>
+    <img id="light", src="">
+</body>
+</html>
