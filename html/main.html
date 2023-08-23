@@ -13,6 +13,8 @@
         let enabled = false;
         let loaded = false;
 
+        let right = true;
+
         function load() {
             if (loaded) return;
 
@@ -23,19 +25,29 @@
         async function turnOn() {
             if (!loaded) return;
 
+            const light = document.getElementById(`light`);
+
             enabled = true;
-            document.getElementById(`light`).src = './8L9Kpm.jpg';
+            light.src = './8L9Kpm.jpg';
 
             await sleep(1500);
 
-            document.getElementById(`light`).src = './good.gif';
+            light.src = './good.gif';
 
             let num = 0;
             while(enabled) {
-                num += 20;
                 if (Math.random() <= 0.5) num += 10;
                 else num -= 10;
-                document.getElementById(`light`).style.marginLeft = num + "px";
+                if (right) {
+                    num += 20;
+                    if (num + light.clientWidth > window.innerWidth) right = false;
+
+                } else {
+                    num -= 20;
+                    if (num <= 0) right = true;
+                }
+
+                light.style.marginLeft = num + "px";
 
                 await sleep(10);
             }
@@ -47,6 +59,7 @@
 
             enabled = false;
             document.getElementById(`light`).src = './close.webp';
+            document.getElementById(`light`).style.marginLeft = 0;
         }
     </script>
 </head>
