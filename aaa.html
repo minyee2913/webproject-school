@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #good {
+            width: 100%;
+            background-color: yellow;
+        }
+        #math {
+            width: 100%;
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="clclick()">이름 입력</button>
+    <button onclick="addNum()">숫자 증가</button>
+    <h3 id="math">이름</h3>
+    <h3 id="good">이름</h3>
+
+    <script>
+        let numSet = prompt("더하고 싶은 숫자를 모두 입력하세요 (띄어쓰기로 구분)").split(" ");
+
+        let num = 0;
+        numSet.forEach((v)=>{
+            num += Number(v);
+        });
+
+        document.getElementById("math").textContent = num.toString();
+
+        function clclick(){
+            document.getElementById("good").textContent = "Welcome " + prompt("이름을 입력하세요");
+        }
+
+        function addNum() {
+            num++;
+
+            document.getElementById("math").textContent = num.toString();
+        }
+    </script>
+</body>
+</html>
