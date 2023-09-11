@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="remaining"></h2>
+    <script>
+        (function DateUtilXmas(){
+            const now = new Date();
+
+            const xmas = new Date(now.getFullYear() + "/12/25").getTime();
+
+            const diff = xmas - now.getTime();
+
+            const mili = Math.floor(diff % 1000);
+
+            const sec = Math.floor(diff / 1000 % 60);
+
+            const min = Math.floor(diff / 1000 / 60 % 60);
+
+            const hour = Math.floor(diff / 1000 / 60 / 60 % 60);
+
+            const day = Math.floor(diff / 1000 / 60 / 60 / 60 % 24);
+
+            const output = `금년 크리스마스까지 ${day}일 ${hour}시간  ${min}분 ${sec}초 남았읍니다.`;
+
+            document.getElementById('remaining').innerHTML = output;
+
+            setTimeout(DateUtilXmas, 1000);
+        })();
+    </script>
+</body>
+</html>
